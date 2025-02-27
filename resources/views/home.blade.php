@@ -61,6 +61,8 @@
         </a>
     </section>
 
+    <a href="table">Table</a>
+
     <!-- Footer -->
     <footer class="bg-gray-800 text-white text-center py-6 mt-16">
         <p>&copy; 2025 My Website. All rights reserved.</p>

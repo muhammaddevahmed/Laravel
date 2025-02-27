@@ -17,3 +17,6 @@ Route::get('contact',function(){
 Route::get('testimonial',function(){
     return view('testimonial');
 });
+Route::get('table',function(){
+    return view('table');
+});
