@@ -1,5 +1,5 @@
 <?php
-
+use App\Http\Controllers\MyController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -19,4 +19,11 @@ Route::get('testimonial',function(){
 });
 Route::get('table',function(){
     return view('table');
+});
+Route::get('index', function () {
+    return app(MyController::class)->selectArray();
+});
+
+Route::get('users', function () {
+    return app(MyController::class)->selectUsers();
 });

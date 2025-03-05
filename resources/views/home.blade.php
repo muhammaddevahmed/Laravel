@@ -17,6 +17,8 @@
                 <a href="{{ url('/about') }}" class="text-gray-700 font-semibold hover:text-blue-600">About</a>
                 <a href="{{ url('/testimonial') }}" class="text-gray-700 font-semibold hover:text-blue-600">Testimonials</a>
                 <a href="{{ url('/contact') }}" class="text-gray-700 font-semibold hover:text-blue-600">Contact</a>
+                <a href="{{ url('/index') }}" class="text-gray-700 font-semibold hover:text-blue-600">Students</a>
+                <a href="{{ url('/users') }}" class="text-gray-700 font-semibold hover:text-blue-600">Users</a>
             </div>
         </div>
     </nav>
