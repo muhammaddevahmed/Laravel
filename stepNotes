@@ -1,0 +1,14 @@
+1 make database
+2 make controller
+3 uncomment database details from .env 
+
+command for making controller:
+ artisan make:controller FirstController
+
+ command for making modal and migration:
+ php artisan make:model Student -m 
+
+ command for sending migration data to database:
+ php artisan migrate
+
+ 

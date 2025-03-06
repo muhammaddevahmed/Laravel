@@ -27,3 +27,5 @@ Route::get('index', function () {
 Route::get('users', function () {
     return app(MyController::class)->selectUsers();
 });
+
+
