@@ -1,9 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
-use Illuminate\View\View;
+use App\Models\Student;
 
 class MyController extends Controller
 {
@@ -21,5 +20,14 @@ class MyController extends Controller
             ["Sana", "sana@gmail.com", "Islamabad"]
         ];
         return view('users', compact('allStudents'));
+    }
+
+    public function insertData(Request $req){
+        $student = new Student();
+        $student->name = $req->Name;
+        $student->email = $req->Email;
+        $student->password = $req->Password;
+        $student->save();
+        return redirect('insert');
     }
 }

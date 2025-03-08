@@ -3,7 +3,7 @@
 3 uncomment database details from .env 
 
 command for making controller:
- artisan make:controller FirstController
+ php artisan make:controller FirstController
 
  command for making modal and migration:
  php artisan make:model Student -m 
@@ -11,4 +11,10 @@ command for making controller:
  command for sending migration data to database:
  php artisan migrate
 
- 
+ update composer:
+ composer update --
+
+ laravel add encryption key
+ php artisan key:generate
+
+ @csrf: cross site reference forchery to submit form

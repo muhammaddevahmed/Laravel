@@ -28,4 +28,7 @@ Route::get('users', function () {
     return app(MyController::class)->selectUsers();
 });
 
-
+Route::get('insert',function(){
+        return view('insertData');
+});
+Route::post( "insert",[MyController::class,'insertData']);
