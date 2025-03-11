@@ -19,43 +19,60 @@
             <label for="" class="form-label">Name</label>
             <input
                 type="text"
+                value = "{{ old('Name') }}"
                 name="Name"
                 id=""
                 class="form-control"
                 placeholder=""
                 aria-describedby="helpId"
             />
-            <!-- <small id="helpId" class="text-muted">Help text</small> -->
+            @error('Name')
+            <small id="helpId" class="text-danger">{{ $message }}</small>
+            @enderror
         </div>
 
         <div class="form-group">
             <label for="" class="form-label">Email</label>
             <input
                 type="email"
+                value = "{{ old ('Email') }}"
                 name="Email"
                 id=""
                 class="form-control"
                 placeholder=""
                 aria-describedby="helpId"
             />
-            <!-- <small id="helpId" class="text-muted">Help text</small> -->
+            @error('Email')
+            <small id="helpId" class="text-danger">{{ $message }}</small>
+            @enderror
         </div>
 
         <div class="form-group">
             <label for="" class="form-label">Password</label>
             <input
                 type="text"
+                 value = "{{ old('Password') }}"
                 name="Password"
                 id=""
                 class="form-control"
                 placeholder=""
                 aria-describedby="helpId"
             />
-            <!-- <small id="helpId" class="text-muted">Help text</small> -->
+            @error('Password')
+            <small id="helpId" class="text-danger">{{ $message }}</small>
+            @enderror
         </div>
         <button class="btn btn-info mt-4">Add User</button>
 
         </form>
+
+        @if(session('success'))
+    <script>
+        alert("{{ session('success') }}");
+    </script>
+@endif
+
+
         
     </div>
 </body>

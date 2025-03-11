@@ -47,15 +47,18 @@
                         <tr>
                             <th scope="col">Name</th>
                             <th scope="col">Email</th>
+                            <th scope="col">Register At</th>
                             
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach($allStudents as $student)
+                        @foreach($allUsers as $user)
                             <tr>
-                                <td>{{ $student[0] }}</td>
-                                <td>{{ $student[1] }}</td>
-                                <td>{{ $student[2] }}</td>
+                               
+                                <td>{{ $user->name }}</td>
+                                <td>{{ $user->email }}</td>
+                                <td>{{ $user->created_at }}</td> 
+
                             </tr>
                         @endforeach
                     </tbody>

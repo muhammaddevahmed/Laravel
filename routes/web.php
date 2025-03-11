@@ -32,3 +32,8 @@ Route::get('insert',function(){
         return view('insertData');
 });
 Route::post( "insert",[MyController::class,'insertData']);
+
+Route::get('selectUsers', function () {
+    return app(MyController::class)->selectStudents();
+});
+
