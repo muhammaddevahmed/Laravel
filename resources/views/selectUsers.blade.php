@@ -62,7 +62,12 @@
                                 <td>{{ $user->email }}</td>
                                 <td>{{ $user->password }}</td>
                                 <td><a href="edit/{{ $user['id'] }}" class = "btn btn-info">Edit</a></td>
-                                <td><a href="" class =  "btn btn-danger">Delete</td>
+                                <td>
+                                   <a href="{{ url('delete/'.$user->id) }}" onclick="return confirm('Are you sure you want to delete this user?')" class="btn btn-danger">
+                                      Delete
+                                   </a>
+                                </td>
+
 
                             </tr>
                         @endforeach
@@ -70,6 +75,11 @@
                 </table>
             </div>
         </div>
+        @if(session('success'))
+    <script>
+        alert("{{ session('success') }}");
+    </script>
+   @endif
     </div>
 
 </body>

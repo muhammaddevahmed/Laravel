@@ -43,7 +43,7 @@ class MyController extends Controller
             "password" => $req->Password 
         ]);
 
-        return redirect('insert')->with('success', 'User added successfully!');
+        return redirect('home')->with('success', 'User added successfully!');
     }
 
     public function selectStudents(): View
@@ -76,6 +76,13 @@ class MyController extends Controller
         $userRecord->save();
 
         return redirect('selectUsers')->with('success', 'User updated successfully!');
+    }
+
+    public function deleteData($id){
+        $student = new Student();
+        $userRecord = Student::find($id);
+        $userRecord->delete();
+        return redirect('selectUsers')->with('success',"User Deleted Suceesfully");
     }
 }
 

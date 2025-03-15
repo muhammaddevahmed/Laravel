@@ -38,6 +38,9 @@ Route::get('selectUsers', function () {
 });
 
 Route::get("edit/{id}", [MyController::class, 'editData']);
+
 Route::post("edit/{id}", [MyController::class, 'updateData']);
+
+Route::get("delete/{id}", [MyController::class, 'deleteData'])->name('deleteUser');
 
 
