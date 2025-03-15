@@ -19,6 +19,7 @@
                 <a href="{{ url('/contact') }}" class="text-gray-700 font-semibold hover:text-blue-600">Contact</a>
                 <a href="{{ url('/index') }}" class="text-gray-700 font-semibold hover:text-blue-600">Students</a>
                 <a href="{{ url('/users') }}" class="text-gray-700 font-semibold hover:text-blue-600">Users</a>
+                <a href="{{ url('/selectUsers') }}" class="text-gray-700 font-semibold hover:text-blue-600">Login Users</a>
             </div>
         </div>
     </nav>

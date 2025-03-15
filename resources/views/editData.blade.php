@@ -19,7 +19,7 @@
             <label for="" class="form-label">Name</label>
             <input
                 type="text"
-                value = "{{ old('Name') }}"
+                value = "{{ $userRecord['name'] }}"
                 name="Name"
                 id=""
                 class="form-control"
@@ -35,7 +35,7 @@
             <label for="" class="form-label">Email</label>
             <input
                 type="email"
-                value = "{{ old ('Email') }}"
+                 value = "{{ $userRecord['email'] }}"
                 name="Email"
                 id=""
                 class="form-control"
@@ -51,7 +51,7 @@
             <label for="" class="form-label">Password</label>
             <input
                 type="text"
-                 value = "{{ old('Password') }}"
+                 value = "{{ $userRecord['password'] }}"
                 name="Password"
                 id=""
                 class="form-control"
@@ -62,7 +62,7 @@
             <small id="helpId" class="text-danger">{{ $message }}</small>
             @enderror
         </div>
-        <button class="btn btn-info mt-4">Add User</button>
+        <button class="btn btn-info mt-4">Update</button>
 
         </form>
 

@@ -37,3 +37,7 @@ Route::get('selectUsers', function () {
     return app(MyController::class)->selectStudents();
 });
 
+Route::get("edit/{id}", [MyController::class, 'editData']);
+Route::post("edit/{id}", [MyController::class, 'updateData']);
+
+
